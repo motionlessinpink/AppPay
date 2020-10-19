@@ -1,52 +1,55 @@
 package com.arquiteam.controller;
 
 import com.arquiteam.view.datosView;
-import com.arquiteam.view.oxxoView;
-import com.arquiteam.view.tarjetaView;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DataController implements ActionListener {
 
-    private datosView dV;
-    private oxxoView oV;
-    private tarjetaView tV;
+    private final datosView dataView;
 
     public DataController() {
-        dV = new datosView();
-        oV = new oxxoView();
-        tV = new tarjetaView();
+        dataView = new datosView();
 
         addingListener();
-        oV.setVisible(false);
-        tV.setVisible(false);
+        filingView();
     }
 
     public void initView() {
-        this.dV.setVisible(true);
+        this.dataView.setVisible(true);
     }
 
-    public void addingListener() {
-        this.dV.jBoxxo.addActionListener(this);
-        this.dV.jBtarjeta.addActionListener(this);
-        this.dV.jPanel3.add(oV);
-        this.dV.jPanel3.add(tV);
+    private void cleanView() {
+        if (this.dataView.jPanel3.getComponentCount() > 0) {
+            this.dataView.jPanel3.getComponent(0).setVisible(false);
+        }
+        this.dataView.jPanel3.removeAll();
+        this.dataView.jPanel3.validate();
+    }
+
+    private void addingListener() {
+        this.dataView.jBoxxo.addActionListener(this);
+        this.dataView.jBtarjeta.addActionListener(this);
+    }
+
+    private void filingView() { //temporal
+        this.dataView.jLconcepto.setText("REALIZACIÓN DE UN EVENTO DE SUBASTA");
+        this.dataView.jLfechaAdju.setText("2020-09-16");
+        this.dataView.jLtipobien.setText("Correo");
+        this.dataView.jLhoraAdju.setText("12:00 AM");
+        this.dataView.jLidevento.setText("MXN371599664762");
+        this.dataView.jLhusoHorario.setText("Africa/Abidjan");
+        this.dataView.jLimporteserv.setText("$15");
     }
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
-
-        if (this.dV.jBoxxo == actionEvent.getSource()) {
-            oV.setVisible(true);
-            tV.setVisible(false);
-            dV.jPanel3.validate();
-        } else if (this.dV.jBtarjeta == actionEvent.getSource()) {
-
-            oV.setVisible(false);
-            tV.setVisible(true);
-            dV.jPanel3.validate();
+        cleanView();
+        if (this.dataView.jBoxxo == actionEvent.getSource()) {
+            new OxxoPayController().initView(this.dataView);
+        } else if (this.dataView.jBtarjeta == actionEvent.getSource()) {
+            new CardPayController().initView(this.dataView);
         }
-
     }
 }

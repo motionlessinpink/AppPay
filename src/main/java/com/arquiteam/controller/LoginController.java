@@ -23,10 +23,10 @@ public class LoginController implements ActionListener {
     }
 
     @Override
-
     public void actionPerformed(ActionEvent actionEvent) {
         if (loginView.jButton1 == actionEvent.getSource()) {
             new DataController().initView();
+            this.loginView.dispose();
         }
     }
 }

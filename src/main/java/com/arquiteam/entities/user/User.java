@@ -1,11 +1,9 @@
 package com.arquiteam.entities.user;
 
-import com.arquiteam.payment.Card;
 
 public class User {
     private String username;
     private String password;
-    private Card personalCard; // ?
 
     public User(String username, String password) {
         this.username = username;

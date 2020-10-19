@@ -11,10 +11,10 @@ package com.arquiteam.view;
 public class oxxoView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jBgenerateVoucher;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField1;
 
     /**
      * Creates new form oxxoView
@@ -36,7 +36,7 @@ public class oxxoView extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jBgenerateVoucher = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -46,8 +46,8 @@ public class oxxoView extends javax.swing.JPanel {
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
         jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 300, -1));
 
-        jButton1.setText("Generar Comprobante");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jBgenerateVoucher.setText("Generar Comprobante");
+        jPanel1.add(jBgenerateVoucher, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 300));
     }// </editor-fold>//GEN-END:initComponents

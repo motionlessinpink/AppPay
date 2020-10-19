@@ -11,7 +11,7 @@ package com.arquiteam.view;
 public class tarjetaView extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    public javax.swing.JButton jBgenerateVoucher;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -19,12 +19,12 @@ public class tarjetaView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    public javax.swing.JTextField jTextField1;
+    public javax.swing.JTextField jTextField2;
+    public javax.swing.JTextField jTextField3;
+    public javax.swing.JTextField jTextField4;
+    public javax.swing.JTextField jTextField5;
+    public javax.swing.JTextField jTextField6;
 
     /**
      * Creates new form tarjetaView
@@ -56,7 +56,7 @@ public class tarjetaView extends javax.swing.JPanel {
         jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jBgenerateVoucher = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -86,8 +86,8 @@ public class tarjetaView extends javax.swing.JPanel {
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, -1, -1));
         jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 270, -1));
 
-        jButton1.setText("Generar Comprobante");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 125, -1, -1));
+        jBgenerateVoucher.setText("Generar Comprobante");
+        jPanel1.add(jBgenerateVoucher, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 125, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 190));
     }// </editor-fold>//GEN-END:initComponents
